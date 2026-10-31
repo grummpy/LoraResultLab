@@ -1,2 +1,7 @@
 # LoraResultLab
-Judge and organize LoRA results: epoch picker, seed variance, style bleed, merge recipes, provenance, node timing, hash index, shelf life
+
+![cover](art/cover.png)
+
+Status: scaffold. See [docs/BUILD_SHEET.md](docs/BUILD_SHEET.md).
+
+Synthetic sample data only. No GPU jobs on remote machines without explicit go-ahead.
