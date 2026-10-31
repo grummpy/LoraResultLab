@@ -1,0 +1,47 @@
+{
+  "training_prompts": [
+    {
+      "id": "amber_circle",
+      "text": "a flat amber circle centered on a warm gradient field",
+      "lora": "style_amber.safetensors"
+    },
+    {
+      "id": "teal_bars",
+      "text": "stacked teal bars on a cool gradient field",
+      "lora": "style_teal.safetensors"
+    },
+    {
+      "id": "violet_triangle",
+      "text": "a violet triangle on a dusk gradient field",
+      "lora": "style_amber.safetensors"
+    }
+  ],
+  "bleed_prompts": [
+    {
+      "id": "unrelated_grid",
+      "text": "a neutral gray grid with no decoration"
+    },
+    {
+      "id": "unrelated_dots",
+      "text": "evenly spaced gray dots on a light field"
+    }
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "epochs": [
+    "epoch_01",
+    "epoch_02",
+    "epoch_03",
+    "epoch_04"
+  ],
+  "unstable_epoch": "epoch_03",
+  "bleed_epochs": [
+    "epoch_01",
+    "epoch_04"
+  ],
+  "high_bleed_epoch": "epoch_04",
+  "notes": "Procedural shapes and gradients. Not photographs. Not people."
+}

@@ -1,0 +1,362 @@
+{
+  "synthetic-amber-recent": {
+    "prompt": [
+      1,
+      "synthetic-amber-recent",
+      {
+        "1": {
+          "class_type": "CheckpointLoaderSimple",
+          "inputs": {
+            "ckpt_name": "synthetic_base.safetensors"
+          }
+        },
+        "3": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "text": "a flat amber circle centered on a warm gradient field",
+            "clip": [
+              "2",
+              1
+            ]
+          }
+        },
+        "4": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "text": "low quality, blurry",
+            "clip": [
+              "2",
+              1
+            ]
+          }
+        },
+        "5": {
+          "class_type": "EmptyLatentImage",
+          "inputs": {
+            "width": 512,
+            "height": 512,
+            "batch_size": 1
+          }
+        },
+        "6": {
+          "class_type": "KSampler",
+          "inputs": {
+            "seed": 11,
+            "steps": 20,
+            "cfg": 7.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "2",
+              0
+            ],
+            "positive": [
+              "3",
+              0
+            ],
+            "negative": [
+              "4",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          }
+        },
+        "8": {
+          "class_type": "VAEDecode",
+          "inputs": {
+            "samples": [
+              "6",
+              0
+            ],
+            "vae": [
+              "1",
+              2
+            ]
+          }
+        },
+        "9": {
+          "class_type": "SaveImage",
+          "inputs": {
+            "filename_prefix": "epoch_04_amber_circle_11",
+            "images": [
+              "8",
+              0
+            ]
+          }
+        },
+        "2": {
+          "class_type": "LoraLoader",
+          "inputs": {
+            "lora_name": "style_amber.safetensors",
+            "strength_model": 0.8,
+            "strength_clip": 0.7,
+            "model": [
+              "1",
+              0
+            ],
+            "clip": [
+              "1",
+              1
+            ]
+          }
+        },
+        "_meta": {
+          "epoch": "epoch_04",
+          "prompt_id": "amber_circle",
+          "prompt": "a flat amber circle centered on a warm gradient field",
+          "seed": 11,
+          "lora_name": "style_amber.safetensors"
+        }
+      },
+      {
+        "client_id": "synthetic"
+      },
+      [
+        "9"
+      ]
+    ],
+    "outputs": {
+      "9": {
+        "images": [
+          {
+            "filename": "epoch_04_amber_circle_11.png",
+            "subfolder": "",
+            "type": "output"
+          }
+        ]
+      }
+    },
+    "status": {
+      "status_str": "success",
+      "completed": true,
+      "messages": [
+        [
+          "execution_start",
+          {
+            "prompt_id": "synthetic-amber-recent",
+            "timestamp": 1700000000000
+          }
+        ],
+        [
+          "execution_success",
+          {
+            "prompt_id": "synthetic-amber-recent",
+            "timestamp": 1700000004500
+          }
+        ]
+      ]
+    },
+    "node_timings": [
+      {
+        "node_id": "1",
+        "class_type": "CheckpointLoaderSimple",
+        "duration_ms": 40
+      },
+      {
+        "node_id": "2",
+        "class_type": "LoraLoader",
+        "duration_ms": 25
+      },
+      {
+        "node_id": "6",
+        "class_type": "KSampler",
+        "duration_ms": 2400
+      },
+      {
+        "node_id": "8",
+        "class_type": "VAEDecode",
+        "duration_ms": 180
+      },
+      {
+        "node_id": "9",
+        "class_type": "SaveImage",
+        "duration_ms": 15
+      }
+    ],
+    "executed_at": "2026-10-28T15:00:00Z"
+  },
+  "synthetic-teal-old": {
+    "prompt": [
+      1,
+      "synthetic-teal-old",
+      {
+        "1": {
+          "class_type": "CheckpointLoaderSimple",
+          "inputs": {
+            "ckpt_name": "synthetic_base.safetensors"
+          }
+        },
+        "3": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "text": "stacked teal bars on a cool gradient field",
+            "clip": [
+              "2",
+              1
+            ]
+          }
+        },
+        "4": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "text": "low quality, blurry",
+            "clip": [
+              "2",
+              1
+            ]
+          }
+        },
+        "5": {
+          "class_type": "EmptyLatentImage",
+          "inputs": {
+            "width": 512,
+            "height": 512,
+            "batch_size": 1
+          }
+        },
+        "6": {
+          "class_type": "KSampler",
+          "inputs": {
+            "seed": 22,
+            "steps": 20,
+            "cfg": 7.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "2",
+              0
+            ],
+            "positive": [
+              "3",
+              0
+            ],
+            "negative": [
+              "4",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          }
+        },
+        "8": {
+          "class_type": "VAEDecode",
+          "inputs": {
+            "samples": [
+              "6",
+              0
+            ],
+            "vae": [
+              "1",
+              2
+            ]
+          }
+        },
+        "9": {
+          "class_type": "SaveImage",
+          "inputs": {
+            "filename_prefix": "epoch_02_teal_bars_22",
+            "images": [
+              "8",
+              0
+            ]
+          }
+        },
+        "2": {
+          "class_type": "LoraLoader",
+          "inputs": {
+            "lora_name": "style_teal.safetensors",
+            "strength_model": 0.8,
+            "strength_clip": 0.7,
+            "model": [
+              "1",
+              0
+            ],
+            "clip": [
+              "1",
+              1
+            ]
+          }
+        },
+        "_meta": {
+          "epoch": "epoch_02",
+          "prompt_id": "teal_bars",
+          "prompt": "stacked teal bars on a cool gradient field",
+          "seed": 22,
+          "lora_name": "style_teal.safetensors"
+        }
+      },
+      {
+        "client_id": "synthetic"
+      },
+      [
+        "9"
+      ]
+    ],
+    "outputs": {
+      "9": {
+        "images": [
+          {
+            "filename": "epoch_02_teal_bars_22.png",
+            "subfolder": "",
+            "type": "output"
+          }
+        ]
+      }
+    },
+    "status": {
+      "status_str": "success",
+      "completed": true,
+      "messages": [
+        [
+          "execution_start",
+          {
+            "prompt_id": "synthetic-teal-old",
+            "timestamp": 1700000000000
+          }
+        ],
+        [
+          "execution_success",
+          {
+            "prompt_id": "synthetic-teal-old",
+            "timestamp": 1700000004500
+          }
+        ]
+      ]
+    },
+    "node_timings": [
+      {
+        "node_id": "1",
+        "class_type": "CheckpointLoaderSimple",
+        "duration_ms": 35
+      },
+      {
+        "node_id": "2",
+        "class_type": "LoraLoader",
+        "duration_ms": 22
+      },
+      {
+        "node_id": "6",
+        "class_type": "KSampler",
+        "duration_ms": 1800
+      },
+      {
+        "node_id": "8",
+        "class_type": "VAEDecode",
+        "duration_ms": 150
+      },
+      {
+        "node_id": "9",
+        "class_type": "SaveImage",
+        "duration_ms": 12
+      }
+    ],
+    "executed_at": "2026-08-01T15:00:00Z"
+  }
+}
