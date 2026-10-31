@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LoraResultLab</title>
+  <link rel="icon" href="/favicon.ico" type="image/png" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <img src="/art/icon.png" alt="" class="logo" width="56" height="56" />
+    <div class="wordmark">
+      <p class="eyebrow">Local LoRA review · synthetic samples</p>
+      <h1>LoraResultLab</h1>
+    </div>
+    <p id="safety-pill" class="safety-pill">ComfyUI off</p>
+  </header>
+  <img class="cover" src="/art/cover.png" alt="LoraResultLab cover art" />
+  <nav id="tabs" aria-label="Modules">
+    <button type="button" data-tab="dashboard" class="active">Dashboard</button>
+    <button type="button" data-tab="epochs">Epoch Picker</button>
+    <button type="button" data-tab="variance">Seed Variance</button>
+    <button type="button" data-tab="bleed">Style Bleed</button>
+    <button type="button" data-tab="merge">Merge Recipe</button>
+    <button type="button" data-tab="provenance">Provenance</button>
+    <button type="button" data-tab="profiler">Node Profiler</button>
+    <button type="button" data-tab="index">Hash Index</button>
+    <button type="button" data-tab="shelf">Shelf Life</button>
+    <button type="button" data-tab="settings">Settings</button>
+  </nav>
+  <main id="view" aria-live="polite"></main>
+  <footer>
+    <p>ComfyUI stays off until Settings is enabled and you confirm a submit. Queue files, recipes, and shelf-life notes never delete LoRAs and never start a GPU job on their own.</p>
+  </footer>
+  <dialog id="zoom">
+    <form method="dialog">
+      <header class="dialog-head">
+        <h2 id="zoom-title">Image</h2>
+        <button type="submit" value="close">Close</button>
+      </header>
+      <img id="zoom-image" alt="" />
+      <p id="zoom-meta"></p>
+      <label>Keeper notes
+        <textarea id="zoom-notes" rows="3" maxlength="2000" placeholder="Why this one stays"></textarea>
+      </label>
+      <div class="row">
+        <button type="button" id="zoom-save">Save keeper</button>
+        <button type="button" id="zoom-a">Set as A</button>
+        <button type="button" id="zoom-b">Set as B</button>
+      </div>
+    </form>
+  </dialog>
+  <div id="toast" role="status"></div>
+  <noscript>This lab needs JavaScript to load the local modules. The server itself does not contact ComfyUI.</noscript>
+  <script src="/static/app.js"></script>
+</body>
+</html>
